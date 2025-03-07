@@ -139,7 +139,7 @@ const categories = [
             onClick={() => toggleCategory(index)}
             className="w-full flex items-center justify-between p-4 bg-white hover:bg-gray-50 transition-colors"
           >
-            <h3 className="text-lg font-semibold">{category.name}</h3>
+            <h3 className="text-lg font-semibold text-left">{category.name}</h3>
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-500">{category.services.length} services</span>
               {expandedCategoryIndex === index ? (
