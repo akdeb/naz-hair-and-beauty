@@ -16,8 +16,10 @@ import { ServiceCategories } from "./components/ServiceCategories"
 //   variable: '--font-karla',
 // });
 
-const instagramUrl = "https://instagram.com/nazhairandbeautystratfordroad";
-const tiktokUrl = "https://tiktok.com/@nazhairandbeauty1";
+const instagramHandle = "nazhairandbeautystratfordroad";
+const instagramUrl = `https://instagram.com/${instagramHandle}`;
+const tiktokHandle = "nazhairandbeauty1";
+const tiktokUrl = `https://tiktok.com/@${tiktokHandle}`;
 const phoneNumber = "tel:+447718311650";
 
 export default function Home() {
@@ -25,7 +27,7 @@ export default function Home() {
     // <div className={`${karla.className}`}>
       <div className="flex min-h-screen flex-col">
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container flex h-16 items-center justify-between">
+        <div className="container px-4 sm:px-6 flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <Image 
               src="/naz/N.png" 
@@ -34,9 +36,9 @@ export default function Home() {
               height={36} 
               className="h-8 w-auto"
             />
-            <span className="text-xl pl-0 font-bold tracking-tight">Naz Hair & Beauty</span>
+            <span className="text-lg font-bold tracking-tight whitespace-nowrap">Naz Hair & Beauty</span>
           </Link>
-          <nav className="hidden md:flex gap-6">
+          <nav className="hidden md:flex gap-4 lg:gap-6">
             <Link href="#services" className="text-sm font-medium transition-colors hover:text-primary">
               Services
             </Link>
@@ -50,13 +52,15 @@ export default function Home() {
               Contact
             </Link>
           </nav>
-          <div className="flex items-center gap-4">
-            <Link href={tiktokUrl} target="_blank" aria-label="Follow us on TikTok">
-              <FaTiktok className="h-5 w-5 text-black transition-colors" />
-            </Link>
-            <Link href={instagramUrl} target="_blank" aria-label="Follow us on Instagram">
-              <FaInstagram className="h-5 w-5 text-pink-500 hover:text-pink-600 transition-colors" />
-            </Link>
+          <div className="flex items-center">
+            <div className="hidden sm:flex items-center gap-4 mr-4">
+              <Link href={tiktokUrl} target="_blank" aria-label="Follow us on TikTok">
+                <FaTiktok className="h-5 w-5 text-black transition-colors" />
+              </Link>
+              <Link href={instagramUrl} target="_blank" aria-label="Follow us on Instagram">
+                <FaInstagram className="h-5 w-5 text-pink-500 hover:text-pink-600 transition-colors" />
+              </Link>
+            </div>
             <Button asChild>
               <Link href={phoneNumber} target="_blank">
                 Book Now
@@ -108,7 +112,7 @@ export default function Home() {
                 </div>
                 
                 <div className="flex items-center gap-2 mt-4">
-                  <span className="text-sm font-medium">Follow us:</span>
+                  <span className="text-sm font-medium">Follow us on</span>
                   <Link href={tiktokUrl} target="_blank" aria-label="Follow us on TikTok" className="p-2 rounded-full hover:bg-white transition-colors">
                     <FaTiktok className="h-5 w-5 text-black" />
                   </Link>
@@ -410,7 +414,7 @@ export default function Home() {
                         <h3 className="font-bold">Instagram</h3>
                         <p className="text-sm text-gray-500">
                           <Link href={instagramUrl} className="hover:underline" target="_blank">
-                            @nazhairandbeauty
+                            @{instagramHandle}
                           </Link>
                         </p>
                       </div>
@@ -422,7 +426,7 @@ export default function Home() {
                         <h3 className="font-bold">TikTok</h3>
                         <p className="text-sm text-gray-500">
                           <Link href={tiktokUrl} className="hover:underline" target="_blank">
-                            @nazhairandbeauty1
+                            @{tiktokHandle}
                           </Link>
                         </p>
                       </div>
