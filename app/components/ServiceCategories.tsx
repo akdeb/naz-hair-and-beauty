@@ -135,12 +135,12 @@ const categories = [
 		    <div className="mt-8 space-y-4 max-w-5xl mx-auto">
       {categories.map((category, index) => (
         <div key={category.name} className="border rounded-lg overflow-hidden">
-          <button
+         <button
             onClick={() => toggleCategory(index)}
             className="w-full flex items-center justify-between p-4 bg-white hover:bg-gray-50 transition-colors"
           >
             <h3 className="text-lg font-semibold text-left">{category.name}</h3>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-shrink-0">
               <span className="text-sm text-gray-500">{category.services.length} services</span>
               {expandedCategoryIndex === index ? (
                 <ChevronUp className="h-5 w-5 text-gray-500" />
